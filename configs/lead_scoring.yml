@@ -1,0 +1,82 @@
+classification:
+  hot_min: 75
+  warm_min: 45
+
+sections:
+  lead_information:
+    label: Lead Information
+    weight: 60
+    rules:
+      - name: decision_maker_title
+        field: job_title
+        type: contains_any
+        values:
+          - founder
+          - owner
+          - ceo
+          - cxo
+          - director
+          - head
+          - vp
+          - vice president
+        points: 25
+        reason: "Decision-maker title matched."
+      - name: valid_contact_email
+        field: email
+        type: contains
+        value: "@"
+        points: 10
+        reason: "Lead has a usable email address."
+      - name: phone_available
+        field: phone
+        type: exists
+        points: 8
+        reason: "Lead has phone contact information."
+      - name: high_intent_source
+        field: source
+        type: equals_any
+        values:
+          - demo_request
+          - pricing_request
+          - referral
+          - indiamart
+        points: 17
+        reason: "Lead source indicates buying intent."
+
+  buyer_information:
+    label: Buyer Information
+    weight: 40
+    rules:
+      - name: target_industry
+        field: industry
+        type: equals_any
+        values:
+          - software
+          - manufacturing
+          - industrial automation
+          - logistics
+        points: 15
+        reason: "Buyer industry is in the target market."
+      - name: employee_count_fit
+        field: employee_count
+        type: range
+        min: 50
+        max: 1000
+        points: 12
+        reason: "Buyer company size fits the ideal customer profile."
+      - name: revenue_fit
+        field: annual_revenue_usd
+        type: min
+        min: 1000000
+        points: 8
+        reason: "Buyer revenue suggests ability to purchase."
+      - name: target_country
+        field: country
+        type: equals_any
+        values:
+          - us
+          - usa
+          - united states
+          - india
+        points: 5
+        reason: "Buyer is in a supported target geography."

@@ -1,0 +1,158 @@
+{
+  "login_url": "https://seller.indiamart.com/",
+  "buy_leads_url": "https://seller.indiamart.com/bltxn/",
+  "username_input": [
+    "input[name='mobile']",
+    "input[name='username']",
+    "input[type='tel']",
+    "input[type='text']"
+  ],
+  "password_input": [
+    "input[name='password']",
+    "input[type='password']"
+  ],
+  "submit_button": [
+    "button[type='submit']",
+    "input[type='submit']",
+    "text=/login|sign in|continue/i"
+  ],
+  "logged_in_marker": [
+    "[data-testid='buy-leads']",
+    ".buy-leads",
+    ".RelventLeads",
+    ".BuyLdC_wrap",
+    ".BuyLdC_cont",
+    "[href*='logout']",
+    "text=/logout|my account|seller dashboard/i"
+  ],
+  "logged_out_marker": [
+    "input[name='mobile']",
+    "input[name='username']",
+    "input[type='tel']",
+    "form input[type='password']",
+    "button:has-text('Login')",
+    "button:has-text('Sign in')",
+    "button:has-text('Verify OTP')"
+  ],
+  "lead_card": [
+    "[data-testid='buy-lead-card']",
+    ".BuyLdC_cont",
+    ".RelventLeads .BuyLdC_cont",
+    ".buyLeadCard",
+    ".bl-card",
+    ".lead-card"
+  ],
+  "lead_detail_click": [],
+  "detail_close_button": [
+    "[aria-label='Close']",
+    "button:has-text('Close')"
+  ],
+  "next_page_button": [
+    "[data-testid='pagination-next']",
+    "button:has-text('Next')",
+    "a:has-text('Next')"
+  ],
+  "next_page_disabled": [
+    "[data-testid='pagination-next'][disabled]",
+    "button:has-text('Next')[disabled]",
+    ".pagination-next.disabled"
+  ],
+  "fields": {
+    "external_lead_id": [
+      "[data-lead-id]",
+      "[data-testid='lead-id']"
+    ],
+    "product_name": [
+      "[data-testid='product-name']",
+      ".BuyLdC_m6",
+      ".product-name",
+      "h2",
+      "h3"
+    ],
+    "product_category": [
+      "[data-testid='product-category']",
+      ".BuyLdC_Mcat",
+      ".product-category"
+    ],
+    "quantity": [
+      "[data-testid='quantity']",
+      ".BuyLdC_isqdet:has-text('Quantity')",
+      "text=/quantity/i"
+    ],
+    "order_value": [
+      "[data-testid='order-value']",
+      ".BuyLdC_isqdet:has-text('Order Value')",
+      "text=/order value/i"
+    ],
+    "purpose": [
+      "[data-testid='purpose']",
+      ".BuyLdC_isqdet:has-text('Purpose')",
+      "text=/purpose/i"
+    ],
+    "lead_time": [
+      "[data-testid='lead-time']",
+      ".BuyLdC_time_loc",
+      "text=/lead time/i"
+    ],
+    "buyer_name": [
+      "[data-testid='buyer-name']",
+      ".buyer-name"
+    ],
+    "business_name": [
+      "[data-testid='business-name']",
+      ".BuyLdC_isqByrDtls:has-text('Buys')",
+      ".business-name",
+      ".company-name"
+    ],
+    "phone_available": [
+      "[data-testid='phone-available']",
+      ".tooltip_vfr:has-text('Mobile Number Available')",
+      "text=/phone/i"
+    ],
+    "email_available": [
+      "[data-testid='email-available']",
+      ".tooltip_vfr:has-text('Email Available')",
+      "text=/email/i"
+    ],
+    "whatsapp_available": [
+      "[data-testid='whatsapp-available']",
+      ".tooltip_vfr:has-text('WhatsApp')",
+      "text=/whatsapp/i"
+    ],
+    "business_available": [
+      "[data-testid='business-available']",
+      ".BuyLdC_isqByrDtls:has-text('Buyer Details')",
+      "text=/business/i"
+    ],
+    "address_available": [
+      "[data-testid='address-available']",
+      ".BuyLdC_time_loc",
+      "text=/address/i"
+    ],
+    "years_active": [
+      "[data-testid='years-active']",
+      ".BuyLdC_byrPill",
+      "text=/years/i"
+    ],
+    "requirements_count": [
+      "[data-testid='requirements-count']",
+      ".BuyLdC_isqByrDtls:has-text('Requirements')",
+      "text=/requirements/i"
+    ],
+    "replies_count": [
+      "[data-testid='replies-count']",
+      ".BuyLdC_isqByrDtls:has-text('Replies')",
+      "text=/replies/i"
+    ],
+    "city": [
+      "[data-testid='city']",
+      ".BuyLdC_time_loc",
+      ".city"
+    ],
+    "state": [
+      "[data-testid='state']",
+      ".BuyLdC_time_loc",
+      ".state"
+    ]
+  }
+}
